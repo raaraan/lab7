@@ -25,8 +25,8 @@ exports.addProject = function(req, res) {
   var newProject = new models.Project({
     "title": form_data.project_title,
     "date": form_data.date,
-    "body_text": form_data.summary,
-    "image_url": form_data.image_url
+    "summary": form_data.summary,
+    "image": form_data.image_url
   });
 
   newProject.save(afterSaving);
